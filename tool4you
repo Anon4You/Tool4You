@@ -1,0 +1,115 @@
+#!/data/data/com.termux/files/usr/bin/python2
+# Anthor : Bishal Singh
+import random
+import time, sys
+import os.path
+import threading
+import itertools
+a = """
+\a\a\n\033[1;32m
+  ______            ____ ____  __
+ /_  __/___  ____  / / // /\ \/ /___  __  __
+  / / / __ \/ __ \/ / // /_ \  / __ \/ / / /
+ / / / /_/ / /_/ / /__  __/ / / /_/ / /_/ /
+/_/  \____/\____/_/  /_/   /_/\____/\__,_/
+
+
+\033[1;31m       [\033[1;32m1\033[1;31m]\033[1;37m Anon4You
+\033[1;31m       [\033[1;32m2\033[1;31m]\033[1;37m Noob-Hackers
+\033[1;31m       [\033[1;32m3\033[1;31m]\033[1;37m Bhai4You
+\033[1;31m       [\033[1;32m4\033[1;31m]\033[1;37m Technical Mujeeb
+\033[1;31m       [\033[1;32m5\033[1;31m]\033[1;37m Others
+\033[1;31m       [\033[1;32m0\033[1;31m]\033[1;37m exit
+
+"""
+b = """
+\a\a\n\033[1;36m
+  ______            ____ ____  __
+ /_  __/___  ____  / / // /\ \/ /___  __  __
+  / / / __ \/ __ \/ / // /_ \  / __ \/ / / /
+ / / / /_/ / /_/ / /__  __/ / / /_/ / /_/ /
+/_/  \____/\____/_/  /_/   /_/\____/\__,_/
+
+
+\033[1;31m       [\033[1;32m1\033[1;31m]\033[1;33m Anon4You
+\033[1;31m       [\033[1;32m2\033[1;31m]\033[1;33m Noob-Hackers
+\033[1;31m       [\033[1;32m3\033[1;31m]\033[1;33m Bhai4You
+\033[1;31m       [\033[1;32m4\033[1;31m]\033[1;33m Technical Mujeeb
+\033[1;31m       [\033[1;32m5\033[1;31m]\033[1;33m Others
+\033[1;31m       [\033[1;32m0\033[1;31m]\033[1;33m exit
+
+"""
+c = """
+\a\a\n\033[1;37m
+  ______            ____ ____  __
+ /_  __/___  ____  / / // /\ \/ /___  __  __
+  / / / __ \/ __ \/ / // /_ \  / __ \/ / / /
+ / / / /_/ / /_/ / /__  __/ / / /_/ / /_/ /
+/_/  \____/\____/_/  /_/   /_/\____/\__,_/
+
+
+\033[1;31m       [\033[1;32m1\033[1;31m]\033[1;35m Anon4You
+\033[1;31m       [\033[1;32m2\033[1;31m]\033[1;35m Noob-Haackers
+\033[1;31m       [\033[1;32m3\033[1;31m]\033[1;35m Bhai4You
+\033[1;31m       [\033[1;32m4\033[1;31m]\033[1;35m Technical Mujeeb
+\033[1;31m       [\033[1;32m5\033[1;31m]\033[1;35m Others
+\033[1;31m       [\033[1;32m0\033[1;31m]\033[1;35m exit
+
+"""
+d = """
+\a\a\n\033[1;33m
+  ______            ____ ____  __
+ /_  __/___  ____  / / // /\ \/ /___  __  __
+  / / / __ \/ __ \/ / // /_ \  / __ \/ / / /
+ / / / /_/ / /_/ / /__  __/ / / /_/ / /_/ /
+/_/  \____/\____/_/  /_/   /_/\____/\__,_/
+
+
+\033[1;31m       [\033[1;32m1\033[1;31m]\033[1;36m Anon4You
+\033[1;31m       [\033[1;32m2\033[1;31m]\033[1;36m Noob-Hackers
+\033[1;31m       [\033[1;32m3\033[1;31m]\033[1;36m Bhai4You
+\033[1;31m       [\033[1;32m4\033[1;31m]\033[1;36m Technical Mujeeb
+\033[1;31m       [\033[1;32m5\033[1;31m]\033[1;36m Others
+\033[1;31m       [\033[1;32m0\033[1;31m]\033[1;36m exit
+
+"""
+stop = False
+def muter():
+
+    for c in itertools.cycle(['- ','\ ','| ','/ ']):
+        if stop:
+            break
+        sys.stdout.write("\r\033[1;32m[+]\033[1;31m Exiting\033[1;37m....." + c)
+        sys.stdout.flush()
+        time.sleep(0.04)
+    sys.stdout.write("\r\033[1;32m[+] \033[1;35mThanks for using this tool, Byeee ...\n")
+t = threading.Thread(target=muter)
+
+def anon_kadut():
+    anon = [a,b,c,d]
+    m = "".join(random.sample(anon,1))
+    os.system("clear")
+    print m
+anon_kadut()
+k = raw_input("\033[1;32m[*]\033[1;31m Choose\033[1;32m :\033[1;36m")
+if k == '0' or k == '0':
+  t.start()
+  time.sleep(1)
+  stop = True
+  os.system("cd")
+  sys.exit(0)
+
+elif k == '1':
+        os.system('python2 /data/data/com.termux/files/home/.anon')
+elif k == '2':
+        os.system('python2 /data/data/com.termux/files/home/.noob')
+elif k == '3':
+        os.system('python2 /data/data/com.termux/files/home/.bhai')
+elif k == '4':
+        os.system('python2 /data/data/com.termux/files/home/.mujeeb')
+elif k == '5':
+        os.system('python2 /data/data/com.termux/files/home/.others')
+else:
+  print '\a\n\033[1;34m[x] \033[1;31mERROR:\033[0;00m sorry wrong input...'
+  time.sleep(0.50)
+  os.system('tool4you')
